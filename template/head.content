@@ -1,0 +1,7 @@
+<title>WR3CKREATIONAL</title>
+<!-- creator: Nicholas Ham https://n-ham.com -->
+<!-- contact: admin@ai-bots.net -->
+<!-- logo from logojoy.com -->
+
+@cssinclude(site/css/pagestyle.css)
+@faviconinclude("site/imgs/favicon.png")
