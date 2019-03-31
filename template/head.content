@@ -273,3 +273,13 @@
 
 @cssinclude(site/css/pagestyle.css)
 @faviconinclude("site/imgs/favicon.png")
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137360653-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137360653-1');
+</script>
