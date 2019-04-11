@@ -50,8 +50,6 @@ body
 	position: absolute;
 	top: 60%;
 	text-align: center;
-	margin-top:-20px;
-	margin-bottom:-20px;
 
 	transition-property: color;
 	-o-transition:1s;
