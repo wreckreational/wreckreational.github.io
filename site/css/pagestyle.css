@@ -63,6 +63,8 @@ body
 #logo:hover
 {
 	top:10%;
+	left:10%;
+	size:50%;
 	margin-top:-20px;
 	margin-bottom:-20px;
 
