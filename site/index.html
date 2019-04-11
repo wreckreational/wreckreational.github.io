@@ -226,9 +226,10 @@
 			and lives. The world needs to start fighting these problems rather than just
 			joining in with causing them. 
 		
-			We do care if people use alcohol as a way to sexually abuse people, or force
-			people to even have casual sex when they don't want to be. People who engage
-			in that behaviour need to be kept away from people they pose a danger to. 
+			We do care if people use alcohol or drugs as a way to sexually abuse people, 
+			or force people to even have casual sex when they don't want to be. People 
+			who engage in that behaviour need to be kept away from people they pose a
+			danger to. 
 		
 			Be very careful of people who use other people's identities, achievements, 
 			etc. etc., society needs to get to a point where people like that can be
@@ -270,11 +271,16 @@
 			In the past people from wr3ckreational have been made to put child porn on the
 			internet and leave it there under threat of violence. People need to wake up
 			to these sorts of things happening and help identify the real perpetrators in
-			society so they can be kept away from their victims for good. 
+			society so they can be kept away from their victims for good. People make 
+			threats to turn the victims against each other, which also helps the actual 
+			victims/perpetrators be treated like the perpetrators/victims by society and
+			helps the perpetrators have their victims handed to them by society. Please
+			help fight these problems. 
 		-->
 		
 		<link rel='stylesheet' type='text/css' href='css/pagestyle.css'>
 		<link rel='icon' type='image/png' href='imgs/favicon.png'>
+		<script src='js/smoke.js'></script>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137360653-1"></script>
@@ -288,7 +294,36 @@
 	</head>
 
 	<body>
-		<br><br><br><br><br><br><br><br>
-		<img src="./imgs/logo.svg" width="100%">
+		<!-- body -->
+		
+		<div id='logo'>
+			<img src="./imgs/logo.svg" width="70%">
+		</div>
+		<canvas id="canvas"></canvas>
+		
+
+		<script>
+			var canvas = document.getElementById('canvas')
+			var ctx = canvas.getContext('2d')
+			canvas.width = innerWidth
+			canvas.height = innerHeight
+
+			var party = smokemachine(ctx, [18, 16, 54])
+			party.start() // start animating
+			party.setPreDrawCallback(function(dt){
+				party.addSmoke(innerWidth/2, innerHeight, .5)
+				canvas.width = innerWidth
+				canvas.height = innerHeight
+			})
+
+			onmousemove = function (e) {
+				var x = e.clientX
+				var y = e.clientY
+				var n = .5
+				var t = Math.floor(Math.random() * 200) + 3800
+				party.addsmoke(x, y, n, t)
+			}
+
+		</script>
 	</body>
 </html>

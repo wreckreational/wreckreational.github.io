@@ -1,2 +1,7 @@
-<br><br><br><br><br><br><br><br>
-<img src="./imgs/logo.svg" width="100%">
+<!-- body -->
+
+<div id='logo'>
+	<img src="./imgs/logo.svg" width="70%">
+</div>
+<canvas id="canvas"></canvas>
+
