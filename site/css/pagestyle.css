@@ -9,11 +9,11 @@ html
 	height: 100%;
 
 	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 
@@ -39,8 +39,8 @@ body
 	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
 
 	/*-moz-box-shadow: 3px 3px 5px #202020;
-    -webkit-box-shadow: 3px 3px 5px #202020;
-    box-shadow: 3px 3px 5px #202020;
+	-webkit-box-shadow: 3px 3px 5px #202020;
+	box-shadow: 3px 3px 5px #202020;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;*/
 }
@@ -80,12 +80,12 @@ body
 .noselect 
 {
 	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
- 	-khtml-user-select: none; /* Konqueror HTML */
-   	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently
-				  supported by Chrome and Opera */
+	  -webkit-user-select: none; /* Safari */
+ 	   -khtml-user-select: none; /* Konqueror HTML */
+   	     -moz-user-select: none; /* Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Non-prefixed version, currently
+	                                supported by Chrome and Opera */
 }
 
 /*
@@ -301,7 +301,7 @@ body
 	Help educate people across society on these topics and test their
 	understanding of various topics. We need the courts, psychs, cops, (extreme)
 	sports, education system, academia, corporations, financial institutions,
-    credit card companies, airlines, armies, intelligence services, military, 
+	credit card companies, airlines, armies, intelligence services, military, 
 	etc. to all get on board with fighting these sorts of problems rather than 
 	helping cause them!
 
