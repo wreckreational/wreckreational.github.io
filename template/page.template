@@ -27,7 +27,6 @@
 				var t = Math.floor(Math.random() * 200) + 3800
 				party.addsmoke(x, y, n, t)
 			}
-
 		</script>
 	</body>
 </html>
