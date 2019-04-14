@@ -1,4 +1,4 @@
 <div id='logo'>
-	<img src="./imgs/logo.svg" width="70%">
+	<a href="google.com"><img src="./imgs/logo.svg" width="70%"></a>
 </div>
 <canvas id="canvas"></canvas>
