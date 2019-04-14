@@ -1,4 +1,4 @@
 <div id='logo'>
-	<a href="google.com"><img src="./imgs/logo.svg" width="70%"></a>
+	<a href="https://wr3ckreational.teemill.com"><img src="./imgs/logo.svg" width="70%"></a>
 </div>
 <canvas id="canvas"></canvas>
