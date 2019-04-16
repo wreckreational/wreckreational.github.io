@@ -7,7 +7,7 @@
 
 @cssinclude(site/css/pagestyle.css)
 @faviconinclude("site/imgs/favicon.png")
-@jsinclude(site/js/smoke.js)
+@jsinclude(site/js/shake.js)
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137360653-1"></script>

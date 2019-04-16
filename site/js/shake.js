@@ -1,5 +1,3 @@
-/* source - https://www.cssscript.com/interactive-smoke-effect-javascript-canvas-smoke-js/  */
-
 /*   Magic UMD boilerplate Beginning  */
 /**/ (function (root, factory) {
 /**/     if (typeof define === 'function' && define.amd) {
@@ -138,7 +136,7 @@ return function SmokeMachine(context, color){
     }
 }
 
-
+/* source - https://www.cssscript.com/interactive-smoke-effect-javascript-canvas-smoke-js/  */
 
 /* Magic UMD Boilerplate Ending */
 /**/ }))
