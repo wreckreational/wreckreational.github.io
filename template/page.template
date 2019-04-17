@@ -12,7 +12,10 @@
 			canvas.width = innerWidth
 			canvas.height = innerHeight
 
-			var party = motionmachine(ctx, [18, 16, 54])
+			var c1 = Math.floor(Math.random() * 250);
+			var c2 = Math.floor(Math.random() * 250);
+			var c3 = Math.floor(Math.random() * 250);
+			var party = motionmachine(ctx, [c1, c2, c3])
 			party.start() // start animating
 			party.setPreDrawCallback(function(dt){
 				//party.addMotion(innerWidth/2, innerHeight, .5)
@@ -20,7 +23,8 @@
 				canvas.height = innerHeight
 			})
 
-			onmousemove = function (e) {
+			onmousemove = function (e) 
+			{
 				var x = e.clientX
 				var y = e.clientY
 				var n = .5
