@@ -34,10 +34,10 @@
 			canvas.width = innerWidth
 			canvas.height = innerHeight
 
-			var party = smokemachine(ctx, [18, 16, 54])
+			var party = motionmachine(ctx, [18, 16, 54])
 			party.start() // start animating
 			party.setPreDrawCallback(function(dt){
-				//party.addSmoke(innerWidth/2, innerHeight, .5)
+				//party.addMotion(innerWidth/2, innerHeight, .5)
 				canvas.width = innerWidth
 				canvas.height = innerHeight
 			})
@@ -47,7 +47,7 @@
 				var y = e.clientY
 				var n = .5
 				var t = Math.floor(Math.random() * 200) + 3800
-				party.addsmoke(x, y, n, t)
+				party.addmotion(x, y, n, t)
 			}
 		</script>
 	</body>
