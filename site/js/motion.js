@@ -136,6 +136,8 @@ return function MotionMachine(context, color){
     }
 }
 
+
+
 /* 
 	source - https://www.cssscript.com/interactive-smoke-effect-javascript-canvas-smoke-js/  
 	this is your hint!
