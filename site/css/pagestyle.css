@@ -23,16 +23,11 @@ body
 
 	display: table;
 
-	width: 80%;
+	width: 100%;
 	max-width: 800px !important;
 	margin: 0 auto; 
 
 	margin-bottom: 40px !important;
-
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 1px;
-	padding-bottom: 10px;
 
 	word-wrap:break-word;
 
