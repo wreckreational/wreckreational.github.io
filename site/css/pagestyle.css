@@ -40,6 +40,13 @@ body
 	border-bottom-right-radius: 8px;*/
 }
 
+br
+{
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
 #smoke
 {
 	position: absolute;
