@@ -6,7 +6,7 @@
 -->
 
 @cssinclude(site/css/pagestyle.css)
-@faviconinclude("site/imgs/favicon.jpeg")
+@faviconinclude("site/imgs/favicon2.png")
 @jsinclude(site/js/motion.js)
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
