@@ -17,12 +17,6 @@
 			var c3 = Math.floor(Math.random() * 250);
 			var party = motionmachine(ctx, [c1, c2, c3])
 			party.start() // start animating
-			
-			/*party.setPreDrawCallback(function(dt){
-				//party.addMotion(innerWidth/2, innerHeight, .5)
-				canvas.width = innerWidth
-				canvas.height = innerHeight
-			})*/
 
 			var type = Math.floor(Math.random() * 4);
 			var colTime = Math.floor(Math.random() * 4000) + 5000;
