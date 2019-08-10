@@ -1,4 +1,6 @@
-<div id='smoke'>
-	<a href="https://wr3ckreational.teemill.com"><img src="https://wr3ckreational.com/imgs/logo.svg" width="70%"></a>
+<div class="content">
+	<div id='smoke'>
+		<a href="https://wr3ckreational.teemill.com"><img src="https://wr3ckreational.com/imgs/logo.svg" width="70%"></a>
+	</div>
+	<canvas id="canvas"></canvas>
 </div>
-<canvas id="canvas"></canvas>
