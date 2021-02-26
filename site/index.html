@@ -22,15 +22,24 @@
 		</script>
 	</head>
 
-	<body>
+	<body onmousemove="play_tune()">
 		<div class="content">
 			<div id='smoke'>
 				<a href="https://wr3ckreational.teemill.com"><img src="https://wr3ckreational.com/imgs/logo.svg" width="70%"></a>
 			</div>
 			<canvas id="canvas"></canvas>
+			<audio id="my_audio"></audio>
 		</div>
 
 		<script>
+			function play_tune()
+			{
+				var myAudio = document.getElementById('my_audio');
+				myAudio.src = "./mp3/The Apocalypse.mp3";
+				myAudio.play();
+				
+			}
+
 			var canvas = document.getElementById('canvas')
 			var ctx = canvas.getContext('2d')
 			canvas.width = innerWidth
