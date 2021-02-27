@@ -11,8 +11,8 @@
 			{
 				var myAudio = document.getElementById('my_audio');
 				var no_tunes = 3;
-				var rnum = (new Date().getSeconds())%3;
-				var tunes = ["./mp3/wr3ckord_1.mp3", "./mp3/wr3ckord_2.mp3", "./mp3/wr3ckord_3.mp3"];
+				var rnum = (new Date().getSeconds())%no_tunes;
+				var tunes = ["./mp3/wr3ckord_1.mp3", "./mp3/wr3ckord_2.mp3", "./mp3/wr3ckord_3.mp3", "./mp3/wr3ckord_4.mp3"];
 				myAudio.src = tunes[rnum];
 				myAudio.play();
 			}
