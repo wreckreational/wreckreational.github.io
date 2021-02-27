@@ -34,9 +34,11 @@
 			function play_tune()
 			{
 				var myAudio = document.getElementById('my_audio');
-				myAudio.src = "./mp3/wr3ckord.mp3";
+				var no_tunes = 3;
+				var rnum = (new Date().getSeconds())%3;
+				var tunes = ["./mp3/wr3ckord_1.mp3", "./mp3/wr3ckord_2.mp3", "./mp3/wr3ckord_3.mp3"];
+				myAudio.src = tunes[rnum];
 				myAudio.play();
-				
 			}
 
 			var canvas = document.getElementById('canvas')
