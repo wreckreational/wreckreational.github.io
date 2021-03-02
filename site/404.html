@@ -80,7 +80,16 @@
 			function play_tune()
 			{
 				var myAudio = document.getElementById('my_audio');
-				var tunes = ["./mp3/wr3ckord_1.mp3", "./mp3/wr3ckord_2.mp3", "./mp3/wr3ckord_3.mp3", "./mp3/wr3ckord_4.mp3", "./mp3/wr3ckord_5.mp3", "./mp3/wr3ckord_6.mp3", "./mp3/wr3ckord_7.mp3", "./mp3/wr3ckord_8.mp3", "./mp3/wr3ckord_9.mp3", "./mp3/wr3ckord_10.mp3"];
+				var tunes = ["./mp3/wr3ckord_1.mp3", 
+				             "./mp3/wr3ckord_2.mp3", 
+				             "./mp3/wr3ckord_3.mp3", 
+				             "./mp3/wr3ckord_4.mp3", 
+				             "./mp3/wr3ckord_5.mp3", 
+				             "./mp3/wr3ckord_6.mp3", 
+				             "./mp3/wr3ckord_7.mp3", 
+				             "./mp3/wr3ckord_8.mp3", 
+				             "./mp3/wr3ckord_9.mp3", 
+				             "./mp3/wr3ckord_10.mp3"];
 				var rnum = (new Date().getSeconds())%tunes.length;
 				myAudio.src = tunes[rnum];
 				myAudio.play();
