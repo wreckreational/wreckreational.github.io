@@ -87,11 +87,13 @@
 		</script>
 	</head>
 
-	<body onmousemove="play_tune()">
+	<body onclick="play_tune()" onmousemove="toggle_logo()">
 		<div class="content">
 			<div id='smoke'>
-				<a href="https://wr3ckreational.teemill.com"><img src="imgs/logo.svg" width="70%"></a>
+				<p><a href="https://wr3ckreational.teemill.com"><img id="character" width="20%" src="imgs/logo_1.png"></a></p>
+				<p><a href="https://wr3ckreational.teemill.com"><img width="80%" id="wr3cked" src="imgs/banner_1.png"></a></p>
 			</div>
+		
 			<canvas id="canvas"></canvas>
 			<audio id="my_audio"></audio>
 		</div>
@@ -102,6 +104,11 @@
 				var myAudio = document.getElementById('my_audio');
 				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%14 + 1).concat(".mp3");
 				myAudio.play();
+				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%7 + 1).concat(".png");
+			}
+			function toggle_logo()
+			{
+				document.getElementById("wr3cked").src = "./imgs/banner_".concat((new Date().getSeconds())%6 + 1).concat(".png");
 			}
 
 			var canvas = document.getElementById('canvas')

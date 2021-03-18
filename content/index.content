@@ -1,7 +1,9 @@
 <div class="content">
 	<div id='smoke'>
-		<a href="https://wr3ckreational.teemill.com"><img src="@pathto(site/imgs/logo.svg)" width="70%"></a>
+		<p><a href="https://wr3ckreational.teemill.com"><img id="character" width="20%" src="@pathto(site/imgs/logo_1.png)"></a></p>
+		<p><a href="https://wr3ckreational.teemill.com"><img width="80%" id="wr3cked" src="@pathto(site/imgs/banner_1.png)"></a></p>
 	</div>
+
 	<canvas id="canvas"></canvas>
 	<audio id="my_audio"></audio>
 </div>
