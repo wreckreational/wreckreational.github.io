@@ -47,6 +47,56 @@ br
 	-ms-user-select: none; /* IE10+ */
 }
 
+@font-face 
+{
+	font-family:"brutal";
+	src: url("../ttf/Brutalworld.ttf") format("truetype");
+	background-color: #0e0f0f !important;
+	text-decoration:none;
+}
+
+a
+{
+	text-decoration:none;
+	color: #0e0f0f !important;
+}
+
+a:hover, shopz:hover
+{
+	text-decoration:none;
+	color: #2adb3b !important;
+}
+
+shopz
+{
+	position: fixed;
+	top: 20px;
+	right: 50px;
+	font-family:'brutal';
+}
+
+shopz:hover
+{
+	text-decoration:none;
+	color: #0f8a30 !important;
+}
+
+boardz
+{
+	position: fixed;
+	top: 60px;
+	right: 50px;
+	font-family:'brutal';
+}
+
+ragz
+{
+	position: fixed;
+	top: 100px;
+	right: 50px;
+	font-family:'brutal';
+}
+
 #smoke
 {
 	position: absolute;
