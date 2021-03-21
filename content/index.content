@@ -6,7 +6,7 @@
 
 	<shopz>shops</shopz>
 	<boardz><a href="http://shop.wr3ckreational.com">boards</a></boardz>
-	<ragz><a href="http://clothes.wr3ckreational.com">uniform shop</a></ragz>
+	<ragz><a href="http://clothes.wr3ckreational.com">uniform</a></ragz>
 
 	<canvas id="canvas"></canvas>
 	<audio id="my_audio"></audio>
