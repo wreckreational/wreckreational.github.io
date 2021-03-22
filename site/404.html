@@ -127,7 +127,7 @@
 			var c1 = Math.floor(Math.random() * 250);
 			var c2 = Math.floor(Math.random() * 250);
 			var c3 = Math.floor(Math.random() * 250);
-			var party = motionmachine(ctx, [c1, c2, c3])
+			var party = motionmachine(ctx, [c1, c2, c3]);
 			party.start() // start animating
 
 			var type = Math.floor(Math.random() * 4);
@@ -174,15 +174,25 @@
 					party = motionmachine(ctx, [c1, c2, c3]);
 					party.start(); // start animating
 					datetime = new Date().getTime();
-					type = Math.floor(Math.random() * 4);
+					type = Math.floor(Math.random() * 5);
 					colTime = Math.floor(Math.random() * 4000) + 5000;
 				}
 
-				if(type == 1)
+				if(type == 0)
 				{
 					var x = Math.floor(Math.random() * innerWidth);
 					party.setPreDrawCallback(function(dt){
 						party.addMotion(x, innerHeight, .5);
+						canvas.width = innerWidth;
+						canvas.height = innerHeight;
+					})
+				}
+				else if(type == 1)
+				{
+					var x = Math.floor(Math.random() * innerWidth);
+					var y = Math.floor(Math.random() * innerHeight/2) + innerHeight/2;
+					party.setPreDrawCallback(function(dt){
+						party.addMotion(x, y, .5);
 						canvas.width = innerWidth;
 						canvas.height = innerHeight;
 					})
