@@ -96,9 +96,32 @@
 		
 		  gtag('config', 'UA-137360653-1');
 		</script>
+		
+		<script>
+			var no_wr3ckords = 14;
+		
+			function keyPressEvent(event) 
+			{
+				var char = event.keyCode,
+				    wr3ckord = char;
+		
+				if(char >= '0' && char <= '9')
+					wr3ckord = char-'0';
+				else if(char >= 'a' && char <= 'z')
+					wr3ckord = 10 + char - 'a';
+				else if(char >= 'A' && char <= 'Z')
+					wr3ckord = 10 + char - 'A';
+		
+				var myAudio = document.getElementById('my_audio');
+				myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
+				myAudio.play();
+		
+				//alert("wtf");
+			}
+		</script>
 	</head>
 
-	<body onclick="play_tune()" onmousemove="toggle_logo()">
+	<body onclick="play_tune()" onmousemove="toggle_logo()" onkeydown="keyPressEvent(event)">
 		<div class="content">
 			<div id='smoke'>
 				<p><img id="character" width="20%" src="imgs/logo_8.png"></p>
@@ -116,13 +139,13 @@
 			function play_tune()
 			{
 				var myAudio = document.getElementById('my_audio');
-				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%14 + 1).concat(".mp3");
+				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 				myAudio.play();
-				//document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%9 + 1).concat(".png");
+				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%9 + 1).concat(".png");
 			}
 			function toggle_logo()
 			{
-				//document.getElementById("wr3cked").src = "./imgs/banner_".concat((new Date().getSeconds())%11 + 1).concat(".png");
+				document.getElementById("wr3cked").src = "./imgs/banner_".concat((new Date().getSeconds())%11 + 1).concat(".png");
 			}
 
 			var canvas = document.getElementById('canvas')

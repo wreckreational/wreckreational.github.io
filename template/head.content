@@ -94,3 +94,26 @@
 
   gtag('config', 'UA-137360653-1');
 </script>
+
+<script>
+	var no_wr3ckords = 14;
+
+	function keyPressEvent(event) 
+	{
+		var char = event.keyCode,
+		    wr3ckord = char;
+
+		if(char >= '0' && char <= '9')
+			wr3ckord = char-'0';
+		else if(char >= 'a' && char <= 'z')
+			wr3ckord = 10 + char - 'a';
+		else if(char >= 'A' && char <= 'Z')
+			wr3ckord = 10 + char - 'A';
+
+		var myAudio = document.getElementById('my_audio');
+		myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
+		myAudio.play();
+
+		//alert("wtf");
+	}
+</script>
