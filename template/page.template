@@ -70,13 +70,6 @@
 				return milisec_diff;
 			}
 
-			function sleep(ms)
-			{
-				var starttime = new Date().getTime();
-				while(get_time_diff(starttime) < ms){}
-				return;
-			}
-
 			onmousemove = function (e) 
 			{
 				if(get_time_diff(datetime) > colTime)
