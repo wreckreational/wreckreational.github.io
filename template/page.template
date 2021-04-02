@@ -3,7 +3,10 @@
 		@input(template/head.content)
 	</head>
 
-	<body onclick="play_tune()" onmousemove="toggle_banner()" onkeydown="keyPressEvent(event)">
+	<body onload="setup_audio_continuer()" 
+	      onclick="play_tune()" 
+	      onmousemove="toggle_banner()" 
+	      onkeydown="keyPressEvent(event)">
 		@content
 
 		<script>
@@ -20,13 +23,6 @@
 				var myAudio = document.getElementById('my_audio');
 				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 				myAudio.play();
-
-				myAudio.onended = function()
-				{
-					var myAudio = document.getElementById('my_audio');
-					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
-					myAudio.play();
-				}
 			}
 			function toggle_banner()
 			{

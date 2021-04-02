@@ -98,24 +98,38 @@
 		</script>
 		
 		<script>
-			var no_wr3ckords = 14;
-			var play = 0;
+			var no_wr3ckords = 14,
+			    play = 0;
+		
+			function setup_audio_continuer()
+			{
+				var myAudio = document.getElementById('my_audio');
+				myAudio.onended = function()
+				{
+					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+					myAudio.play();
+				}
+			}
 		
 			function keyPressEvent(event) 
 			{
 				var char = event.keyCode,
 				    wr3ckord = char;
 		
+				//alert(char);
+		
 				if(char == 9  || 
 				   char == 16 || 
 				   char == 17 || 
 				   char == 18 || 
 				   char == 20 ||
+				   char == 38 ||
+				   char == 40 ||
 				   char == 91)
 				{
 					return;
 				}
-				else if(char == 32 || char == 80)
+				else if(char == 32 || char == 80) 
 				{
 					var myAudio = document.getElementById('my_audio');
 					if(myAudio.paused)
@@ -125,22 +139,30 @@
 		
 					return;
 				}
-		
-				var myAudio = document.getElementById('my_audio');
-				myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
-				myAudio.play();
-		
-				myAudio.onended = function()
+				else if(char == 37) 
 				{
 					var myAudio = document.getElementById('my_audio');
-					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
-					myAudio.play();
+					myAudio.currentTime -= 1;
+					return;
 				}
+				else if(char == 39) 
+				{
+					var myAudio = document.getElementById('my_audio');
+					myAudio.currentTime += 1;
+					return;
+				}
+		
+				var myAudio = document.getElementById('my_audio');
+				myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords+1).concat(".mp3");
+				myAudio.play();
 			}
 		</script>
 	</head>
 
-	<body onclick="play_tune()" onmousemove="toggle_banner()" onkeydown="keyPressEvent(event)">
+	<body onload="setup_audio_continuer()" 
+	      onclick="play_tune()" 
+	      onmousemove="toggle_banner()" 
+	      onkeydown="keyPressEvent(event)">
 		<div class="content">
 			<div id='smoke'>
 				<p><img id="character" width="20%" src="imgs/logo_8.png"></p>
@@ -168,13 +190,6 @@
 				var myAudio = document.getElementById('my_audio');
 				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 				myAudio.play();
-
-				myAudio.onended = function()
-				{
-					var myAudio = document.getElementById('my_audio');
-					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
-					myAudio.play();
-				}
 			}
 			function toggle_banner()
 			{
