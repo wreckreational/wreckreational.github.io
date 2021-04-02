@@ -97,24 +97,19 @@
 
 <script>
 	var no_wr3ckords = 14;
+	var play = 0;
 
 	function keyPressEvent(event) 
 	{
 		var char = event.keyCode,
 		    wr3ckord = char;
 
-		if(char >= '0' && char <= '9')
-			wr3ckord = char-'0';
-		else if(char >= 'a' && char <= 'z')
-			wr3ckord = 10 + char - 'a';
-		else if(char >= 'A' && char <= 'Z')
-			wr3ckord = 10 + char - 'A';
-		else if(char == 9 || 
-		        char == 16 || 
-		        char == 17 || 
-		        char == 18 || 
-		        char == 20 ||
-		        char == 91)
+		if(char == 9  || 
+		   char == 16 || 
+		   char == 17 || 
+		   char == 18 || 
+		   char == 20 ||
+		   char == 91)
 		{
 			return;
 		}
@@ -132,5 +127,12 @@
 		var myAudio = document.getElementById('my_audio');
 		myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
 		myAudio.play();
+
+		myAudio.onended = function()
+		{
+			var myAudio = document.getElementById('my_audio');
+			myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
+			myAudio.play();
+		}
 	}
 </script>

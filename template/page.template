@@ -3,18 +3,32 @@
 		@input(template/head.content)
 	</head>
 
-	<body onclick="play_tune()" onmousemove="toggle_logo()" onkeydown="keyPressEvent(event)">
+	<body onclick="play_tune()" onmousemove="toggle_banner()" onkeydown="keyPressEvent(event)">
 		@content
 
 		<script>
+			function sleep(ms) 
+			{
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
 			function play_tune()
 			{
+				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%10 + 1).concat(".png");
+				play = 1;
+
 				var myAudio = document.getElementById('my_audio');
 				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 				myAudio.play();
-				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%10 + 1).concat(".png");
+
+				myAudio.onended = function()
+				{
+					var myAudio = document.getElementById('my_audio');
+					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+					myAudio.play();
+				}
 			}
-			function toggle_logo()
+			function toggle_banner()
 			{
 				document.getElementById("wr3cked").src = "./imgs/banner_".concat((new Date().getSeconds())%11 + 1).concat(".png");
 			}
