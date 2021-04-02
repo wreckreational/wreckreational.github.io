@@ -133,7 +133,7 @@
 				myAudio.onended = function()
 				{
 					var myAudio = document.getElementById('my_audio');
-					myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords + 1).concat(".mp3");
+					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 					myAudio.play();
 				}
 			}
