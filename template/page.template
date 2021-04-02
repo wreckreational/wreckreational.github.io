@@ -17,7 +17,7 @@
 
 			function play_tune()
 			{
-				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%10 + 1).concat(".png");
+				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%11 + 1).concat(".png");
 				play = 1;
 
 				var myAudio = document.getElementById('my_audio');
