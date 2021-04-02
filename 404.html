@@ -1,0 +1,298 @@
+<html>
+	<head>
+		<title>WR3CKREATIONAL</title>
+		
+		<!--
+			Creator: Nicholas Ham 
+			         https://n-ham.com
+			         https://nift.dev
+		
+			 Boards: http://shop.wr3ckreational.com    
+			         -> https://boardpusher.com/wr3ckreational
+			Clothes: http://clothes.wr3ckreational.com
+			         -> https://wr3ckreational.teemill.com
+		
+			================================================================
+		
+			wr3ckreational started as a play on words combining wreck and
+			recreational to recognise what various things go through so that
+			we can train up to fight abuse, in particular the global war to
+			end sexual abuse on planet earth, ie. for sexual abuse to never
+			happen again on planet earth. 
+		
+			Do not trust people who claim to be onside with these wars
+			and/or onside with wr3ckreational without thoroughly questioning
+			people when they are actually speaking genuinely. 
+		
+			"Should we trust?" "fuck no!"
+		
+			If you would like to become part Australian during your
+			lifetime, one way to achieve this is to steal sponsorship 
+			from WR3CKREATIONAL. Buy our stuff and say you're sponsored
+			by us. However if you treat kidnap and rape like that is 
+			stealing you will be hunted. 
+		
+			We encourage people to get educated on how much of an actual
+			problem human trafficking, sexual abuse, forced relationships,
+			promises, dibbsing, people whose idea of stealing is kidnap and
+			rape etc. are on planet earth and get onside with the war to 
+			make sure sexual abuse never happens again on planet earth. If 
+			a kid sexually abuses an adult, the kid is the sexual abuser. 
+		
+			It is not okay to tell people who to fall for, even if there's 
+			enough heinous people on the planet to claim any kind of 
+			democratic bullshit on that topic. Raping kids in to people
+			is far worse, any attempt to prolong the suffering of people
+			who are targets to rapists is considered sabotage in the war
+			efforts to end sexual abuse, including making them play along
+			for their rapist's rape family/families. People who refuse to
+			get educated on these topics and refuse to learn what they are
+			and are not competent at and stick to the things they are
+			competent at etc. are considered part the enemy in these wars.
+			Especially if they still give opinions on these topics front of
+			house or behind the scenes.
+		
+			These problems are to be cleaned up from the past, present and
+			future. Anyone who thinks the present and future can be cleaned
+			up without cleaning up the past should be given a very quick 
+			chance to wake the fuck up and be educated, otherwise treat them
+			as complicit to the suffering that has happened on planet earth
+			without justice being served. 
+		
+			We want people to figure out what they are and are not good at
+			and hone those skills to be used as weapons against sexual abuse
+			on planet earth. Everything is a weapon, it depends what it is
+			used for, is it a danger to the rapist society or contributing
+			to prolonging the suffering of who and what the rapists on this
+			planet target? A lot of the other heinous problems on this
+			planet are often caused to cover up the heinous problems with
+			sexual abuse or any attempts to fight the other heinous problems
+			are sabotaged in all sorts of ways that further ruins the lives
+			of innocent people and prolongs the suffering of who the rapists
+			target on planet earth. 
+		
+			https://n-ham.com/piracy.html
+			https://n-ham.com/education.html
+			https://n-ham.com/nature.html
+			https://n-ham.com/skateboarding.html
+			https://nift.dev/coe.html
+			https://nift.dev/resources/promos.html
+			https://nift.dev/docs/fns.html
+			https://nift.dev/docs/f++.html
+			https://nift.dev/docs/n++.html
+			https://nift.dev/docs/interactive.html
+		-->
+		
+		<link rel='stylesheet' type='text/css' href='css/pagestyle.css'>
+		<link rel='icon' type='image/png' href='imgs/favicon.png'>
+		<script src='js/motion.js'></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137360653-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-137360653-1');
+		</script>
+		
+		<script>
+			var no_wr3ckords = 14,
+			    play = 0;
+		
+			function setup_audio_continuer()
+			{
+				var myAudio = document.getElementById('my_audio');
+				myAudio.onended = function()
+				{
+					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+					myAudio.play();
+				}
+			}
+		
+			function keyPressEvent(event) 
+			{
+				var char = event.keyCode,
+				    wr3ckord = char;
+		
+				//alert(char);
+		
+				if(char == 9  || 
+				   char == 16 || 
+				   char == 17 || 
+				   char == 18 || 
+				   char == 20 ||
+				   char == 38 ||
+				   char == 40 ||
+				   char == 91)
+				{
+					return;
+				}
+				else if(char == 32 || char == 80) 
+				{
+					var myAudio = document.getElementById('my_audio');
+					if(myAudio.paused)
+						myAudio.play();
+					else
+						myAudio.pause();
+		
+					return;
+				}
+				else if(char == 37) 
+				{
+					var myAudio = document.getElementById('my_audio');
+					myAudio.currentTime -= 1;
+					return;
+				}
+				else if(char == 39) 
+				{
+					var myAudio = document.getElementById('my_audio');
+					myAudio.currentTime += 1;
+					return;
+				}
+		
+				var myAudio = document.getElementById('my_audio');
+				myAudio.src = "./mp3/wr3ckord_".concat(wr3ckord%no_wr3ckords+1).concat(".mp3");
+				myAudio.play();
+			}
+		</script>
+	</head>
+
+	<body onload="setup_audio_continuer()" 
+	      onclick="play_tune()" 
+	      onmousemove="toggle_banner()" 
+	      onkeydown="keyPressEvent(event)">
+		<div class="content">
+			<div id='smoke'>
+				<a href="https://wr3ckreational.teemill.com"><img src="https://wr3ckreational.com/imgs/logo.svg" width="70%"></a>
+			</div>
+			<canvas id="canvas"></canvas>
+		</div>
+
+		<script>
+			function sleep(ms) 
+			{
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			function play_tune()
+			{
+				document.getElementById("character").src = "./imgs/logo_".concat((new Date().getSeconds())%10 + 1).concat(".png");
+				play = 1;
+
+				var myAudio = document.getElementById('my_audio');
+				myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+				myAudio.play();
+			}
+			function toggle_banner()
+			{
+				document.getElementById("wr3cked").src = "./imgs/banner_".concat((new Date().getSeconds())%11 + 1).concat(".png");
+			}
+
+			var canvas = document.getElementById('canvas')
+			var ctx = canvas.getContext('2d')
+			canvas.width = innerWidth
+			canvas.height = innerHeight
+
+			var c1 = Math.floor(Math.random() * 250);
+			var c2 = Math.floor(Math.random() * 250);
+			var c3 = Math.floor(Math.random() * 250);
+			var party = motionmachine(ctx, [c1, c2, c3]);
+			party.start() // start animating
+
+			var type = Math.floor(Math.random() * 4);
+			var colTime = Math.floor(Math.random() * 4000) + 5000;
+
+			var datetime = new Date().getTime();
+
+			function get_time_diff( datetime )
+			{
+				var datetime = typeof datetime !== 'undefined' ? datetime : "2014-01-01 01:02:03.123456";
+
+				var datetime = new Date( datetime ).getTime();
+				var now = new Date().getTime();
+
+				if( isNaN(datetime) )
+				{
+					return "";
+				}
+
+				if (datetime < now) {
+					var milisec_diff = now - datetime;
+				}else{
+					var milisec_diff = datetime - now;
+				}
+
+				return milisec_diff;
+			}
+
+			onmousemove = function (e) 
+			{
+				if(get_time_diff(datetime) > colTime)
+				{
+					c1 = Math.floor(Math.random() * 250);
+					c2 = Math.floor(Math.random() * 250);
+					c3 = Math.floor(Math.random() * 250);
+					party.stop();
+					party = motionmachine(ctx, [c1, c2, c3]);
+					party.start(); // start animating
+					datetime = new Date().getTime();
+					type = Math.floor(Math.random() * 5);
+					colTime = Math.floor(Math.random() * 4000) + 5000;
+				}
+
+				if(type == 0)
+				{
+					var x = Math.floor(Math.random() * innerWidth);
+					party.setPreDrawCallback(function(dt){
+						party.addMotion(x, innerHeight, .5);
+						canvas.width = innerWidth;
+						canvas.height = innerHeight;
+					})
+				}
+				else if(type == 1)
+				{
+					var x = Math.floor(Math.random() * innerWidth);
+					var y = Math.floor(Math.random() * innerHeight/2) + innerHeight/2;
+					party.setPreDrawCallback(function(dt){
+						party.addMotion(x, y, .5);
+						canvas.width = innerWidth;
+						canvas.height = innerHeight;
+					})
+				}
+				else if(type == 2)
+				{
+					var x = Math.floor(Math.random() * innerWidth);
+					var y = Math.floor(Math.random() * innerHeight/2) + innerHeight/2;
+					party.setPreDrawCallback(function(dt){
+						party.addMotion(x, y, .5);
+						canvas.width = innerWidth;
+						canvas.height = innerHeight;
+					})
+				}
+				else if(type == 3)
+				{
+					var x = Math.floor(Math.random() * innerWidth);
+					var y = Math.floor(Math.random() * innerHeight/2) + innerHeight/2;
+					var x2 = Math.floor(Math.random() * innerWidth);
+					var y2 = Math.floor(Math.random() * innerHeight/2) + innerHeight/2;
+					party.setPreDrawCallback(function(dt){
+						party.addMotion(x, y, .5);
+						party.addMotion(x2, y2, .5);
+						canvas.width = innerWidth;
+						canvas.height = innerHeight;
+					})
+				}
+				else
+				{
+					var x = e.clientX;
+					var y = e.clientY;
+					var n = .5;
+					var t = Math.floor(Math.random() * 200) + 3800;
+					party.addmotion(x, y, n, t);
+				}
+			}
+		</script>
+	</body>
+</html>
