@@ -96,7 +96,7 @@
 </script>
 
 <script>
-	var no_wr3ckords = 19,
+	var no_wr3ckords = 20,
 	    play = 0;
 
 	function setup_audio_continuer()
