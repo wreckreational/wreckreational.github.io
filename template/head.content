@@ -81,6 +81,8 @@
 	https://nift.dev/docs/interactive.html
 -->
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel='stylesheet' type='text/css' href='@pathto(site/css/pagestyle.css)'>
 <link rel='icon' type='image/png' href='@pathto(site/imgs/favicon.png)'>
 <script src='@pathto(site/js/motion.js)'></script>
