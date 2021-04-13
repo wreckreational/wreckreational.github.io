@@ -1,12 +1,7 @@
-<div class="content">
-	<div id='smoke'>
-		<p><img id="character" width="20%" src="@pathto(site/imgs/logo_8.png)"></p>
-		<p><img width="80%" id="wr3cked" src="@pathto(site/imgs/banner_8.png)"></p>
-	</div>
-
-	<boardz><a href="http://shop.wr3ckreational.com">boardz</a></boardz>
-	<ragz><a href="http://clothes.wr3ckreational.com">clothez</a></ragz>
-
-	<canvas id="canvas"></canvas>
-	<audio id="my_audio"></audio>
+<div id='smoke'>
+	<p><img id="character" width="20%" src="@pathto(site/imgs/logo_8.png)"></p>
+	<p><img width="80%" id="wr3cked" src="@pathto(site/imgs/banner_8.png)"></p>
 </div>
+
+<canvas id="canvas"></canvas>
+<audio id="my_audio"></audio>
