@@ -137,6 +137,8 @@
 		
 		<script>
 			var no_wr3ckords = 24,
+			    no_images = 5,
+			    image = 0,
 			    play = 0;
 		
 			function setup_audio_continuer()
@@ -147,6 +149,33 @@
 					myAudio.src = "./mp3/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
 					myAudio.play();
 				}
+			}
+		
+			function prev_image() 
+			{
+				if(document.getElementById("my_media"))
+				{
+					var pic = document.getElementById('my_media');
+					if(image == 0)
+						image = no_images-1;
+					else
+						--image;
+					pic.src = "./media/wr3ckord_".concat(image%no_images+1).concat(".jpg");
+				}
+		
+				return;
+			}
+		
+			function next_image()
+			{
+				if(document.getElementById("my_media"))
+				{
+					var pic = document.getElementById('my_media');
+					image = (image+1)%no_images;
+					pic.src = "./media/wr3ckord_".concat(image%no_images+1).concat(".jpg");
+				}
+		
+				return;
 			}
 		
 			function keyPressEvent(event) 
@@ -161,8 +190,6 @@
 				   char == 17 || 
 				   char == 18 || 
 				   char == 20 ||
-				   char == 38 ||
-				   char == 40 ||
 				   char == 91)
 				{
 					return;
@@ -181,12 +208,33 @@
 				{
 					var myAudio = document.getElementById('my_audio');
 					myAudio.currentTime -= 1;
+		
+					return;
+				}
+				else if(char == 38) 
+				{
+					var pic = document.getElementById('my_media');
+					if(image == 0)
+						image = no_images-1;
+					else
+						--image;
+					pic.src = "./media/wr3ckord_".concat(image%no_images+1).concat(".jpg");
+		
 					return;
 				}
 				else if(char == 39) 
 				{
 					var myAudio = document.getElementById('my_audio');
 					myAudio.currentTime += 1;
+		
+					return;
+				}
+				else if(char == 40) 
+				{
+					var pic = document.getElementById('my_media');
+					image = (image+1)%no_images;
+					pic.src = "./media/wr3ckord_".concat(image%no_images+1).concat(".jpg");
+		
 					return;
 				}
 		
@@ -212,6 +260,10 @@
 				<p><img id="character" width="20%" src="imgs/logo_8.png"></p>
 				<p><img width="80%" id="wr3cked" src="imgs/banner_8.png"></p>
 			</div>
+			
+			<center id="picz">
+					<img id="my_media" width="600px" src="media/wr3ckord_1.jpg">
+			</center>
 			
 			<canvas id="canvas"></canvas>
 			<audio id="my_audio"></audio>
