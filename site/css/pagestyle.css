@@ -20,6 +20,7 @@ html
 img
 {
 	max-width: 80%;
+	max-height: 90vh;
 	border-radius: 10px;
 }
 
@@ -81,11 +82,44 @@ menu
 	font-family:'brutal';
 }
 
+#picz
+{
+	position: absolute;
+	top: 90%;
+	left: 10%;
+	right: 10%;
+	opacity: 0.0;
+
+	transition-property: color;
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	/* ...and now for the proper property */
+	transition:1s;
+}
+
+#picz:hover
+{
+	opacity: 1.0;
+
+	top:5%;
+
+	transition-property: color;
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	/* ...and now for the proper property */
+	transition:1s;
+}
+
 #smoke
 {
 	position: absolute;
-	top: 60%;
+	top: -50%;
 	text-align: center;
+	opacity: 0.5;
 
 	transition-property: color;
 	-o-transition:1s;
@@ -98,11 +132,12 @@ menu
 
 #smoke:hover
 {
-	top:-50%;/*10%;*/
+	top:100%;/*10%;*/
 	left:15%;
 	size:50%;
 	margin-top:-20px;
 	margin-bottom:-20px;
+	opacity: 1.0;
 
 	transition-property: color;
 	-o-transition:1s;
@@ -123,8 +158,4 @@ menu
 	          user-select: none; /* Non-prefixed version, currently
 	                                supported by Chrome and Opera */
 }
-
-/*
-	About wr3ckreational has been moved, send an email if you'd like to know where
-*/
 

@@ -3,5 +3,9 @@
 	<p><img width="80%" id="wr3cked" src="@pathto(site/imgs/banner_8.png)"></p>
 </div>
 
+<center id="picz">
+		<img id="my_media" width="600px" src="@pathto(site/media/wr3ckord_1.jpg)">
+</center>
+
 <canvas id="canvas"></canvas>
 <audio id="my_audio"></audio>
