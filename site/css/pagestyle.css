@@ -85,9 +85,7 @@ menu
 #picz
 {
 	position: absolute;
-	top: 90%;
-	left: 10%;
-	right: 10%;
+	left: -35%;
 	opacity: 0.0;
 
 	transition-property: color;
@@ -103,7 +101,8 @@ menu
 {
 	opacity: 1.0;
 
-	top:5%;
+	top: 5%;
+	left:5%;
 
 	transition-property: color;
 	-o-transition:1s;
@@ -117,9 +116,9 @@ menu
 #smoke
 {
 	position: absolute;
-	top: -50%;
+	top: 100%;
 	text-align: center;
-	opacity: 0.5;
+	opacity: 0.4;
 
 	transition-property: color;
 	-o-transition:1s;
@@ -132,7 +131,7 @@ menu
 
 #smoke:hover
 {
-	top:100%;/*10%;*/
+	top:-70%;/*10%;*/
 	left:15%;
 	size:50%;
 	margin-top:-20px;
